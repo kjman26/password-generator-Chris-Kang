@@ -1,17 +1,19 @@
- //need variable to hold each set of options (char, spclchar,upper,lower)
- //function that gathers parameters - good
+ //need variable to hold each set of options (char, spclchar,upper,lower) - 
+ //function that gathers parameters - good - won't display all
  //inside parameters 
  //long conditional statement - if respond "no" to all = include at least 1
  //create holding array for possibleCharacters
- //concat options if user selects ok into possibleCharacter array (each)
+    //
+ //concat options if user selects ok into possibleCharacter array (each)?????
  //pick random options from holding array w/even number of each
  //for loop specific length 
+    //for (i = 0; i<128, i++)
  //create string and put on page 
 
 
 
 
- 
+const possibleCharacters = [];
  
  var lowerCase = ["a",
  "b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y",
@@ -22,7 +24,6 @@
     '@',
     '%',
     '+',
-    '\\',
     '/',
     "'",
     '!',
@@ -44,14 +45,11 @@
     '.',
   ];
 
-const possibleCharacters ["characters", "specials", "upperCase", "lowerCase"];
 
 //alerts and pop ups for parameters
 document.querySelector("#generate").addEventListener("click", writePassword) 
 
 function generatePassword(){
-
-possibleCharacters.concat(specials)
 
     var characters= prompt("How many characters do you want?", "number of characters");
 
@@ -60,23 +58,20 @@ possibleCharacters.concat(specials)
         
         console.log(characters)
 
+possibleCharacters.concat(specials)
+   
     var specials = confirm("click ok for special character")
-        if (specialCharacter) {
-        }
-    
-        console.log(specialCharacter)
+        
+        console.log(specialCharacter)    
 
-possibleCharacters.concat(upperCase)     
-    var upperCase = prompt("Do you want an Uppercase letter?", "enter yes or no"); 
-        if (upperCase == "yes"){
-            alert ("even safer!")
-        }
-  
-        console.log(uppercase)
-possibleCharacters.concat(lowerCase)     
-var lowerCase = prompt("Do you want a lowercase letter?", "enter yes or no");
-        if (lowerCase == "yes"){
-        }
+
+    var upperCase = confirm("click ok for uppercase letter")
+
+        console.log(upperCase)  
+// possibleCharacters.concat(upperCase)
+// possibleCharacters.concat(lowerCase)
+    var lowerCase = confirm("click ok for lowercase letter")
+
         console.log(lowerCase)
     }   
 //store input and create password
@@ -89,12 +84,12 @@ function writePassword() {
     passwordText.value = password;
 }
 
-password.includes (characters, start)
-    if (password !== characters) {console.log("please enter proper number of characters")}
-password.includes (specialCharacter, start)
-    if (password !== specialCharacter) {console.log("please enter proper number of characters")}
-password.includes (uppercase, start)
-    if (password !== uppercase) {console.log("please enter proper number of characters")}
-password.includes (lowercase, start)
-    if (password !== lowercase) {console.log("please enter proper number of characters")
-    }
+// password.includes (characters, start)
+//     if (password !== characters) {console.log("please enter proper number of characters")}
+// password.includes (specialCharacter, start)
+//     if (password !== specialCharacter) {console.log("please enter proper number of characters")}
+// password.includes (uppercase, start)
+//     if (password !== uppercase) {console.log("please enter proper number of characters")}
+// password.includes (lowercase, start)
+//     if (password !== lowercase) {console.log("please enter proper number of characters")
+//     }
