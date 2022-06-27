@@ -1,19 +1,17 @@
- //need variable to hold each set of options (char, spclchar,upper,lower) - 
- //function that gathers parameters - good - won't display all
+ //need variable to hold each set of options (char, spclchar,upper,lower)
+ //function that gathers parameters - good
  //inside parameters 
  //long conditional statement - if respond "no" to all = include at least 1
  //create holding array for possibleCharacters
-    //
- //concat options if user selects ok into possibleCharacter array (each)?????
+ //concat options if user selects ok into possibleCharacter array (each)
  //pick random options from holding array w/even number of each
  //for loop specific length 
-    //for (i = 0; i<128, i++)
  //create string and put on page 
 
 
 
 
-const possibleCharacters = [];
+var possibleCharacters = [];
  
  var lowerCase = ["a",
  "b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y",
@@ -51,27 +49,26 @@ document.querySelector("#generate").addEventListener("click", writePassword)
 
 function generatePassword(){
 
-    var characters= prompt("How many characters do you want?", "number of characters");
+    var passLength= prompt("How many characters do you want?", "number of characters");
 
-       if (characters<8 || characters>128){
-        alert("incorrect amount of characters");}
-        
-        console.log(characters)
-
-possibleCharacters.concat(specials)
-   
-    var specials = confirm("click ok for special character")
-        
-        console.log(specialCharacter)    
+    if (passLength<8 || passLength>128){
+        alert("incorrect amount of passLength");}
+    else if(passLength == isNaN){return null}
+    //     possibleCharacters = generatePassword.concat(passLength)
+    //     console.log(passLength)
 
 
-    var upperCase = confirm("click ok for uppercase letter")
+    var specials = confirm("click ok if you want special characters")
+    //     console.log(specialCharacter)    
+    possibleCharacters.concat(specials)
 
+    var upperCase = confirm("click ok for uppercase")  
+    possibleCharacters.concat(upperCase)
         console.log(upperCase)  
-// possibleCharacters.concat(upperCase)
-// possibleCharacters.concat(lowerCase)
-    var lowerCase = confirm("click ok for lowercase letter")
 
+
+    var lowerCase = confirm("click ok for lowercase letter")
+    possibleCharacters.concat(lowerCase)
         console.log(lowerCase)
     }   
 //store input and create password
@@ -84,12 +81,12 @@ function writePassword() {
     passwordText.value = password;
 }
 
-// password.includes (characters, start)
-//     if (password !== characters) {console.log("please enter proper number of characters")}
-// password.includes (specialCharacter, start)
-//     if (password !== specialCharacter) {console.log("please enter proper number of characters")}
-// password.includes (uppercase, start)
-//     if (password !== uppercase) {console.log("please enter proper number of characters")}
-// password.includes (lowercase, start)
-//     if (password !== lowercase) {console.log("please enter proper number of characters")
-//     }
+password.includes (characters, start)
+    if (password !== characters) {console.log("please enter proper number of characters")}
+password.includes (specialCharacter, start)
+    if (password !== specialCharacter) {console.log("please enter proper number of characters")}
+password.includes (uppercase, start)
+    if (password !== uppercase) {console.log("please enter proper number of characters")}
+password.includes (lowercase, start)
+    if (password !== lowercase) {console.log("please enter proper number of characters")
+    }
