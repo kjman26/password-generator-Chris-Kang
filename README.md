@@ -1,6 +1,6 @@
 # password-generator
 
-"[password generator]""(file:///C:/Users/kjman/repo/homework/challenges/Password%20Generator%20Challenge%20Module%202/Password_Generator/password-generator/index.html)"
+click link to visit page: [password generator](https://kjman26.github.io/password-generator-Chris-Kang/)
 
 Purpose/Motivation:
     The purpose of this project was to create a random password generator to help others create unique passwords. The website allows the user to choose whether they want to include features such as special characters, numbers, upper or lower case and how many numbers (between 8-128) they wish their passwords to be.
@@ -16,7 +16,8 @@ Features/Use:
     After answering the prompts, the new password will be generated!
 
 Credits:
-Author: Chris Kang
-!W3 Schools!
-TA's: William, Lindsay, and Henry!
-Instructor: Joe    
+
+    Author: Chris Kang
+    !W3 Schools!
+    TA's: William, Lindsay, and Henry!
+    Instructor: Joe    

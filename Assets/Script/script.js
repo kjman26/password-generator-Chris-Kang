@@ -36,40 +36,44 @@ function generatePassword() {
 
     var passLength = prompt("How many characters do you want?", "number of characters between 8 and 128");
 
-    while (passLength < 8 || passLength > 128) {
+    if (passLength < 8 || passLength > 128) {
         alert("incorrect amount of passLength");
     }
-    if (passLength === true) {possibleCharacters = possibleCharacters.concat(passLength); 
+    else if (passLength === true) {possibleCharacters = possibleCharacters.concat(passLength); 
     } 
     console.log(passLength)
 
-    var specials = confirm("click ok if you want special characters")
+    specials = confirm("click ok if you want special characters")
     if (specials === true) {possibleCharacters.concat(specials)
     }
     console.log(specials)
 
-    var upperCase = confirm("click ok for uppercase")
+     upperCase = confirm("click ok for uppercase")
     if (upperCase === true){possibleCharacters = possibleCharacters.concat(upperCase)
     }
     console.log(upperCase)
 
-    var lowerCase = confirm("click ok for lowercase letter")
+    lowerCase = confirm("click ok for lowercase letter")
     if (lowerCase === true){possibleCharacters =
     possibleCharacters.concat(lowerCase)
     console.log(lowerCase)
     };
-    var numbers = confirm("click ok if you want numbers")
+    
+    numbers = confirm("click ok if you want numbers")
     if (numbers === true) {possibleCharacters = possibleCharacters.concat(numbers)
     console.log(numbers)
 };
     for (let i = 0; i <= passLength; i++) {
-    
+    password = possibleCharacters.toString(Math.floor(Math.random()*possibleCharacters.length))
+
 };
     if (specials===false && upperCase===false && lowerCase===false && numbers===false){alert("You must select ok for at least one unique character")
 };  
+
+
 return password
 };
-password = possibleCharacters.charAt(Math.floor(Math.random()*possibleCharacters.length))
+
 vargenerateBtn = document.querySelector("#generate")
 
 function writePassword() {
